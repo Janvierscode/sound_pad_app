@@ -12,8 +12,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      title: 'Sound Pad',
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
       theme: ThemeData(
         textTheme: GoogleFonts.bungeeSpiceTextTheme(),
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.black),
