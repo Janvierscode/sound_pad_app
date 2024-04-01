@@ -30,6 +30,9 @@ class _PadState extends State<Pad> {
 
   @override
   Widget build(BuildContext context) {
+    double width = MediaQuery.of(context).size.width;
+    double height = MediaQuery.of(context).size.height;
+
     return GestureDetector(
       onTap: () async {
         setState(() {
@@ -51,16 +54,17 @@ class _PadState extends State<Pad> {
         });
       },
       child: Container(
-        height: 90,
-        width: 90,
+        height: height/8.2,
+        width: width/4.3,
         decoration: BoxDecoration(
-          gradient: RadialGradient(
-            colors: [
+            borderRadius: const BorderRadius.all(Radius.circular(6.0)),
+            gradient: RadialGradient(colors: [
               _colorCenter,
               _colorOutline,
-            ],
-          ),
-        ),
+            ], radius: 0.5),
+            boxShadow: const [
+              BoxShadow(color: Colors.grey, blurRadius: 3.0),
+            ]),
       ),
     );
   }
